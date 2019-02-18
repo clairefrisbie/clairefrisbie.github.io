@@ -5,7 +5,6 @@ html, body, p, h1, div {
 
 body {
 	background-color: #e5d5e2;
-	min-width: 300px;
 }
 
 a,
@@ -19,6 +18,7 @@ a:link {
 	display: inline-block;
 	height: 14px;
 }
+
 ul {
 	list-style: none;
 	text-decoration: none;
@@ -28,7 +28,7 @@ ul {
 }
 
 #wrapper {
-	padding-top: calc(50vh - 55px);
+	padding-top: calc(50vh - 5vw);
 }
 
 #pie {
@@ -38,9 +38,12 @@ ul {
 	width: 50vw;
 	height: 50vw;
 
+	z-index: 10;
+
   -webkit-filter: grayscale(1) contrast(.8);
   filter: grayscale(1) contrast(.8);
   opacity: .50;
+
   object-fit: fill;
 }
 
@@ -49,24 +52,30 @@ ul {
 	position: sticky;
 
 	font-family: 'Codystar', cursive;
+	font-size: 10vw;
 	color: #FFFFFF;
 	text-align: center;
 
-	top: 45px;
+	top: 5vh;
 	width: 100vw;
-	font-size: 90px;
+
+	z-index: 100;
 }
 
 #card {
 	background-color: #FFFFFF;
 
 	position: relative;
-	width: 400px;
+	width: calc(30vw);
+	min-width: 300px;
 
-	left: calc(50% - 200px);
+	z-index: 100;
 
 	margin-top: calc(50vh - 100px);
 	margin-bottom: calc(50vh - 100px);
+	margin-left: auto;
+	margin-right: auto;
+
 	padding: 20px;
 	padding-bottom: 50px;
 
