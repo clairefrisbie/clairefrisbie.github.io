@@ -1,9 +1,14 @@
-html, body, p, h1, div {
+html, body, h1 {
 	padding: 0;
 	margin: 0;
 }
 
 body {
+	position: relative;
+
+	max-width: 1500px;
+	min-width: 400px;
+
 	background-color: #e5d5e2;
 }
 
@@ -22,20 +27,18 @@ a:link {
 ul {
 	list-style: none;
 	text-decoration: none;
-	padding: 0px;
-	padding-top: 10px;
-	margin: 0px;
+	padding-left: 0;
 }
 
 #wrapper {
-	padding-top: calc(50vh - 5vw);
+	padding-top: calc(50vh - 8vmax);
 }
 
 #pie {
 	position: fixed;
-  left: calc(25vw);
-  top: calc(50vh - 25vw);
-	width: 50%;
+  top: calc(50vh - 25vmin - 5vw);
+	left: calc(50% - 25vmin); /* 50% fixes iphone */
+	width: 50vmin;
 	z-index: 10;
 
   -webkit-filter: grayscale(1) contrast(.8);
@@ -50,12 +53,12 @@ ul {
 	position: sticky;
 
 	font-family: 'Codystar', cursive;
-	font-size: 10vw;
+	font-size: 6vmax;
 	color: #FFFFFF;
 	text-align: center;
 
-	top: 5vh;
-	width: 100vw;
+	top: 30px;
+	width: 100%;
 
 	z-index: 100;
 }
@@ -64,13 +67,14 @@ ul {
 	background-color: #FFFFFF;
 
 	position: relative;
-	width: calc(30vw);
+	width: 30%;
 	min-width: 300px;
+	max-width: 400px;
 
 	z-index: 100;
 
-	margin-top: calc(50vh - 10vw);
-	margin-bottom: calc(50vh - 150px);
+	margin-top: calc(45vh);
+	margin-bottom: calc(50vh - 125px);
 	margin-left: auto;
 	margin-right: auto;
 
@@ -78,5 +82,23 @@ ul {
 	padding-bottom: 50px;
 
 	font-family: 'Roboto Mono', monospace;
-	font-size: 12px;
+	font-size: 10px;
+}
+
+/* max width for viewport calcs */
+@media only screen and (min-width: 1500px) {
+	#pie {
+		left: calc(750px - 25vmin);
+	}
+}
+
+/* tablet and iphone */
+@media only screen and (max-width: 649px) {
+	#title {
+		font-size: calc(20px + 2vmax);
+	}
+
+	#wrapper {
+		padding-top: calc(50vh - 5vmax);
+	}
 }
