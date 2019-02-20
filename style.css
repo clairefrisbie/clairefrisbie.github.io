@@ -10,6 +10,14 @@ body {
 	min-width: 400px;
 
 	background-color: #e5d5e2;
+
+/*
+	background-image: url(pie-bg.png);
+	background-repeat: no-repeat;
+	background-position: calc(50vw - 25vmin) calc(50vh - 25vmin);
+	background-attachment: fixed;
+	background-size: 50vmin 50vmin;
+	*/
 }
 
 a,
@@ -31,21 +39,24 @@ ul {
 }
 
 #wrapper {
-	padding-top: calc(50vh - 8vmax);
+	padding-top: calc(50vh - 4vmin);
 }
 
 #pie {
 	position: fixed;
-  top: calc(50vh - 25vmin - 5vw);
-	left: calc(50% - 25vmin); /* 50% fixes iphone */
+
+	left: calc(50vw - 25vmin);
+	top: calc(50vh - 25vmin);
 	width: 50vmin;
+	height: 50vmin;
+
 	z-index: 10;
 
   -webkit-filter: grayscale(1) contrast(.8);
   filter: grayscale(1) contrast(.8);
   opacity: .50;
 
-  object-fit: fill;
+	object-fit: fill;
 }
 
 #title {
@@ -53,7 +64,7 @@ ul {
 	position: sticky;
 
 	font-family: 'Codystar', cursive;
-	font-size: 6vmax;
+	font-size: 8vmin;
 	color: #FFFFFF;
 	text-align: center;
 
@@ -67,14 +78,15 @@ ul {
 	background-color: #FFFFFF;
 
 	position: relative;
+
 	width: 30%;
 	min-width: 300px;
 	max-width: 400px;
 
 	z-index: 100;
 
-	margin-top: calc(45vh);
-	margin-bottom: calc(50vh - 125px);
+	margin-top: calc(50vh - 100px);
+	margin-bottom: calc(40vh - 125px);
 	margin-left: auto;
 	margin-right: auto;
 
@@ -87,18 +99,11 @@ ul {
 
 /* max width for viewport calcs */
 @media only screen and (min-width: 1500px) {
+	body {
+		background-position: calc(750px - 25vmin) calc(50vh - 25vmin);
+	}
+
 	#pie {
 		left: calc(750px - 25vmin);
-	}
-}
-
-/* tablet and iphone */
-@media only screen and (max-width: 649px) {
-	#title {
-		font-size: calc(20px + 2vmax);
-	}
-
-	#wrapper {
-		padding-top: calc(50vh - 5vmax);
 	}
 }
