@@ -45,7 +45,7 @@ ul {
 #pie {
 	position: fixed;
 
-	left: calc(50vw - 25vmin);
+	left: calc(50% - 25vmin);
 	top: calc(50vh - 25vmin);
 	width: 50vmin;
 	height: 50vmin;
