@@ -10,14 +10,6 @@ body {
 	min-width: 400px;
 
 	background-color: #e5d5e2;
-
-/*
-	background-image: url(pie-bg.png);
-	background-repeat: no-repeat;
-	background-position: calc(50vw - 25vmin) calc(50vh - 25vmin);
-	background-attachment: fixed;
-	background-size: 50vmin 50vmin;
-	*/
 }
 
 a,
@@ -90,11 +82,24 @@ ul {
 	margin-left: auto;
 	margin-right: auto;
 
-	padding: 20px;
-	padding-bottom: 50px;
-
 	font-family: 'Roboto Mono', monospace;
 	font-size: 10px;
+}
+
+#card p {
+	padding: 20px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+
+#card p:first-child {
+	padding-top: 20px;
+}
+
+#card ul {
+	padding: 20px;
+	padding-top: 0px;
+	padding-bottom: 40px;
 }
 
 /* max width for viewport calcs */
