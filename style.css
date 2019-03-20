@@ -61,7 +61,7 @@ ul {
 	text-align: center;
 
 	top: 30px;
-	width: 100%;
+	width: 100vw;
 
 	z-index: 100;
 }
@@ -71,9 +71,7 @@ ul {
 
 	position: relative;
 
-	width: 30%;
-	min-width: 300px;
-	max-width: 400px;
+	width: 350px;
 
 	z-index: 100;
 
@@ -93,6 +91,10 @@ ul {
 @media only screen and (min-width: 1500px) {
 	body {
 		background-position: calc(750px - 25vmin) calc(50vh - 25vmin);
+	}
+
+	#title {
+		width: 1500px;
 	}
 
 	#pie {
