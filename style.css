@@ -7,7 +7,6 @@ body {
 	position: relative;
 
 	max-width: 1500px;
-	min-width: 400px;
 
 	background-color: #e5d5e2;
 }
@@ -71,7 +70,9 @@ ul {
 
 	position: relative;
 
-	width: 400px;
+	width: 30%;
+	min-width: 300px;
+	max-width: 400px;
 
 	z-index: 100;
 
@@ -87,18 +88,8 @@ ul {
 	font-size: 10px;
 }
 
-@media only screen and (max-width: 375px) {
-	#card {
-		width: 300px;
-	}
-}
-
 /* max width for viewport calcs */
 @media only screen and (min-width: 1500px) {
-	body {
-		background-position: calc(750px - 25vmin) calc(50vh - 25vmin);
-	}
-
 	#title {
 		width: 1500px;
 	}
