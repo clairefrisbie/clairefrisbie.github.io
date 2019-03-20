@@ -82,24 +82,11 @@ ul {
 	margin-left: auto;
 	margin-right: auto;
 
+	padding: 20px;
+	padding-bottom: 50px;
+
 	font-family: 'Roboto Mono', monospace;
 	font-size: 10px;
-}
-
-#card p {
-	padding: 20px;
-	padding-top: 10px;
-	padding-bottom: 0px;
-}
-
-#card p:first-child {
-	padding-top: 20px;
-}
-
-#card ul {
-	padding: 20px;
-	padding-top: 0px;
-	padding-bottom: 40px;
 }
 
 /* max width for viewport calcs */
